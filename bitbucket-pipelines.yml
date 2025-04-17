@@ -1,0 +1,19 @@
+image: hashicorp/terraform:1.6.6
+
+pipelines:
+  default:
+    - step:
+        name: Terraform Init & Plan
+        script:
+          - cd environments/prod
+          - terraform init
+          - terraform plan
+
+  branches:
+    main:
+      - step:
+          name: Terraform Apply
+          script:
+            - cd environments/prod
+            - terraform init
+            - terraform apply -auto-approve

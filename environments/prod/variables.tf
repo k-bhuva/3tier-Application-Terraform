@@ -1,0 +1,4 @@
+variable "ami_id" {}
+variable "key_name" {}
+variable "db_username" {}
+variable "db_password" {}
