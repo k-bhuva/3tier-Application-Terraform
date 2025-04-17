@@ -17,3 +17,4 @@ pipelines:
             - cd environments/prod
             - terraform init
             - terraform apply -auto-approve
+
